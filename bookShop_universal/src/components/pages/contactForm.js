@@ -16,7 +16,13 @@ class ContactForm extends Component{
             bookRequest: findDOMNode(this.refs.bookRequest).value,
             price: findDOMNode(this.refs.price).value
         }]
-        this.props.postContactMessage(contactForm)
+
+        if (contactForm.firstName !== ''){
+            this.props.postContactMessage(contactForm)
+        }else{
+            return false;
+        }
+        
         
     }
 

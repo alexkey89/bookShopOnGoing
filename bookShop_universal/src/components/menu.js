@@ -4,7 +4,7 @@ import {Row, Col, Navbar, Nav, NavItem, Badge} from 'react-bootstrap';
 export default class Menu extends Component{
     render(){
         return(
-    <Navbar inverse collapseOnSelect fixedTop>
+    <Navbar inverse fixedTop>
         <Navbar.Header>
         <Navbar.Brand>
             <a href="/">Home</a>

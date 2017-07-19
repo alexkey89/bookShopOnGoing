@@ -37854,7 +37854,7 @@ var routes = _react2.default.createElement(
     _react2.default.createElement(_menu2.default, null),
     _react2.default.createElement(
         _reactRouterDom.Switch,
-        null,
+        { key: Math.random() },
         _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _booksList2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { path: '/admin', component: _booksForm2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _about2.default }),
@@ -49083,7 +49083,12 @@ var ContactForm = function (_Component) {
                 bookRequest: (0, _reactDom.findDOMNode)(this.refs.bookRequest).value,
                 price: (0, _reactDom.findDOMNode)(this.refs.price).value
             }];
-            this.props.postContactMessage(contactForm);
+
+            if (contactForm.firstName !== '') {
+                this.props.postContactMessage(contactForm);
+            } else {
+                return false;
+            }
         }
     }, {
         key: 'resetForm',
@@ -49308,7 +49313,7 @@ var Menu = function (_Component) {
         value: function render() {
             return _react2.default.createElement(
                 _reactBootstrap.Navbar,
-                { inverse: true, collapseOnSelect: true, fixedTop: true },
+                { inverse: true, fixedTop: true },
                 _react2.default.createElement(
                     _reactBootstrap.Navbar.Header,
                     null,

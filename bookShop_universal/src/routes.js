@@ -49,7 +49,7 @@ const NotFound = function(){
 const routes = (
     <div>
         <Menu />
-        <Switch>
+        <Switch key={Math.random()}>
             <Route exact={true} path="/" component={BooksList} />
             <Route path="/admin" component={BooksForm} />
             <Route path="/about" component={About} />
