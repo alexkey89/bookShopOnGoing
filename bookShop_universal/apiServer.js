@@ -16,9 +16,6 @@ var mongoose = require('mongoose');
 //LOCAL DB
 mongoose.connect('mongodb://localhost:27017/bookshop');
 
-//SERVER DB - MLAB
-//mongoose.connect('mongodb://testUser:1234@ds149030.mlab.com:49030/bookshop');
-
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, '#MongoDB - connection error: '));
 // --->>> SET UP SESSIONS <<<----
